@@ -1255,7 +1255,7 @@ uvwasi_errno_t uvwasi_fd_prestat_get(uvwasi_t* uvwasi,
     goto exit;
   }
 
-  buf->pr_type = UVWASI_PREOPENTYPE_DIR;
+  buf->tag = UVWASI_PREOPENTYPE_DIR;
   buf->u.dir.pr_name_len = strlen(wrap->path) + 1;
   err = UVWASI_ESUCCESS;
 exit:
